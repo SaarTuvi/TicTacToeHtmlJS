@@ -71,6 +71,7 @@ function onBtnClicked(btnClicked) {
 
     thisCell.innerHTML = nextAction;
     var isWon = updateGameState(btnClicked.id);
+    var allBtns = document.getElementsByName('tableBtn');
     if(!isWon){
         if (nextAction == 'X'){
             nextAction = 'O';
@@ -80,7 +81,6 @@ function onBtnClicked(btnClicked) {
             nextAction = 'X';
             color = "blue";
         }
-        var allBtns = document.getElementsByName('tableBtn');
         if(allBtns.length>0)
         allBtns.forEach(element => { element.value = nextAction; element.style.color = color; });
         else{
@@ -89,6 +89,7 @@ window.alert("Game Over! Tied Game!");
     }
     else{
         window.alert("Game Over! "+nextAction+" Won!")
+        allBtns.forEach(elemment => { elemment.disabled=true;});
     }
 }
 
