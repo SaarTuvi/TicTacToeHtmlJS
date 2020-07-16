@@ -9,7 +9,7 @@ table {
 }
 tr{
    height :100px;
-   background-color : lightskyblue;
+   background-color : linen;
 }
 
 td{
@@ -28,7 +28,7 @@ input {
     
 }
 .mainBtn:hover{
-    background-color: rgb(6, 175, 6);
+    background-color: rgb(21, 211, 21);
 }
 
 .gameBtn{
@@ -36,4 +36,9 @@ input {
     height: 75px;
     border-Radius: 75%;
     font-Size: 40px;
+    background-color: lightgray;
+}
+
+.gameBtn:hover{
+    background-color: lightslategray;
 }

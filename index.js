@@ -54,6 +54,7 @@ function createTicTacToeTable() {
             btn.type = "button";
             btn.name = "tableBtn";
             btn.id = btnId
+            btn.style.color = color;
          btn.value = nextAction;
          btn.className="gameBtn";
             btn.onclick = (function () { onBtnClicked(this) });
@@ -81,7 +82,7 @@ function onBtnClicked(btnClicked) {
         }
         var allBtns = document.getElementsByName('tableBtn');
         if(allBtns.length>0)
-        allBtns.forEach(element => { element.value = nextAction; });
+        allBtns.forEach(element => { element.value = nextAction; element.style.color = color; });
         else{
 window.alert("Game Over! Tied Game!");
         }
