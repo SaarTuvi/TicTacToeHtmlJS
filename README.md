@@ -1,4 +1,4 @@
 # TicTacToeHtmlJS
 
-Link to repository:
-https://github.com/SaarTuvi/TicTacToeHtmlJS.git
+Link to page:
+https://saartuvi.github.io/TicTacToeHtmlJS/index.html
