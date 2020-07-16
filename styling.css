@@ -1,0 +1,39 @@
+div {
+    text-align: center;
+}
+
+table {
+    text-align: center;
+    margin-left:auto;
+    margin-right:auto;
+}
+tr{
+   height :100px;
+   background-color : lightskyblue;
+}
+
+td{
+    width: 100px;
+   font-size: 50px;
+}
+
+input {
+    text-align: center;
+}
+.mainBtn{
+    width: 50%;
+    height: 100px;
+    background-color: lightgreen;
+    font-size: 60px;
+    
+}
+.mainBtn:hover{
+    background-color: rgb(6, 175, 6);
+}
+
+.gameBtn{
+    width: 75px;
+    height: 75px;
+    border-Radius: 75%;
+    font-Size: 40px;
+}

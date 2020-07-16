@@ -2,42 +2,18 @@
 <html lang="en">
 
 <head>
-    <style>
-        div {
-            text-align: center;
-        }
-
-        table {
-            text-align: center;
-            margin-left:auto;
-            margin-right:auto;
-        }
-
-        input {
-            text-align: center;
-        }
-        .mainBtn{
-            width: 50%;
-            height: 100px;
-            background-color: lightgreen;
-            font-size: 60px;
-            
-        }
-        .mainBtn:hover{
-            background-color: green;
-        }
-    </style>
     <script src="index.js">
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TiCTacToe</title>
+    <link rel="stylesheet" type="text/css" href="styling.css">
 </head>
 
 <body>
     <div>
-        <input onclick="createTicTacToeTable() 
-        " type="button" name="mainBtn" value="Start Game" class="mainBtn";/>
+        <input onclick="createTicTacToeTable()"
+         type="button" name="mainBtn" value="Start Game" class="mainBtn";/>
         <br><br>
         <table id="ticTacToe"></table>
     </div>

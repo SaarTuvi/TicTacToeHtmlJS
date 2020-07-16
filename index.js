@@ -47,22 +47,15 @@ function createTicTacToeTable() {
     for (let rowNumber = 0; rowNumber < 3; rowNumber++) {
         var row = x.insertRow(rowNumber);
         row.id = "Row_" + rowNumber;
-        row.style.height = '100px'
-        row.style.backgroundColor = "lightskyblue";
         for (let cellNumber = 0; cellNumber < 3; cellNumber++) {
             var cell = row.insertCell(cellNumber)
             cell.id = "Cell_" + rowNumber + "_" + cellNumber;
-            cell.style.width = '100px';
-            cell.style.fontSize = "50px";
             var btn = document.createElement('input');
             btn.type = "button";
             btn.name = "tableBtn";
             btn.id = btnId
-            btn.value = nextAction;
-            btn.style.width = '75px';
-            btn.style.height = '75px';
-            btn.style.borderRadius = "75%";
-            btn.style.fontSize="40px";
+         btn.value = nextAction;
+         btn.className="gameBtn";
             btn.onclick = (function () { onBtnClicked(this) });
             cell.appendChild(btn);
             btnId++;
@@ -71,11 +64,10 @@ function createTicTacToeTable() {
 }
 
 function onBtnClicked(btnClicked) {
-    //      window.alert(btnClicked.id+" Pressed");
     thisCell = btnClicked.closest("td");
     thisCell.removeChild(btnClicked);
     thisCell.style.color = color;
-   
+
     thisCell.innerHTML = nextAction;
     var isWon = updateGameState(btnClicked.id);
     if(!isWon){
@@ -88,11 +80,14 @@ function onBtnClicked(btnClicked) {
             color = "blue";
         }
         var allBtns = document.getElementsByName('tableBtn');
+        if(allBtns.length>0)
         allBtns.forEach(element => { element.value = nextAction; });
+        else{
+window.alert("Game Over! Tied Game!");
+        }
     }
     else{
-        window.alert("Game over! "+nextAction+" Won!")
-        createTicTacToeTable();
+        window.alert("Game Over! "+nextAction+" Won!")
     }
 }
 
